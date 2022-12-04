@@ -6,25 +6,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+<style>
+    body {
+        display: flex;
+        justify-content: center;
+        box-sizing: border-box;
+    }
+    div {
+        width: 70%;
+    }
+
+    span {
+        font-weight: 800;
+    }
+</style>
 <body>
-    Se introdujeron en ECMAScript 6 y tienen las siguientes características:
+    <div>
+   <p><h2>Se introdujeron en ECMAScript 6 y tienen las siguientes características:</h2>
+    <p>var:</p>
+        <ul>
+            <li>se puede acceder desde cualquier lugar del scope (es global)</li>
+            <li>se puede redeclarar</li> 
+            <li>se puede reasignar</li>
+        </ul>
 
-    var:
-        se puede acceder desde cualquier lugar del scope (es global)
-        se puede redeclarar
-        se puede reasignar
-
-    let:
-        esta limitada por el scope donde es declarada
-        NO se puede redeclarar en el mismo scope
-        se puede reasignar
-
-    const:
-        esta limitada por el scope donde es declarada
-        NO se puede redeclarar en el mismo scope
-        NO se puede reasignar
-        Nota: se pueden utilizar métodos como push o pop para los arrays debido a que los métodos hacen referencia a la constante declarada y no la están redeclarando o reasignando.
-
+    <p>let:</p>
+        <ul>
+            <li>esta limitada por el scope donde es declarada</li>
+            <li>NO se puede redeclarar en el mismo scope</li>
+            <li>se puede reasignar</li>
+        </ul>
+    <p>const:</p>
+        <ul>
+        <li>esta limitada por el scope donde es declarada</li>
+        <li>NO se puede redeclarar en el mismo scope</li>
+        <li>NO se puede reasignar</li> 
+        <h4> Nota: se pueden utilizar métodos como push o pop para los arrays debido a que los métodos hacen referencia a la constante declarada y no la están redeclarando o reasignando.</h4>
+        </ul>
 En conclusión, gana const.
+</p>
+<p>Declaración de variables: reservar un espacio en memoria para la variable en si.</p> 
+<p>Re-declaración de variables: volver a declarar una variable previamente existente.</p> 
+<p>Asignación de variables: darle un valor a dicho espacio de memoria reservado.</p>
+<p>Re-asignación de variables: darle un nuevo valor a una variable.</p>
+<hr>
+<h3>Variables y sus distintos metodos</h3>
+<p><span>VAR</span>, es posible realizar solo una declaración, el valor de la variable será undefiend pero no arrojará ningún error.</p> 
+<p><span>VAR</span>, es posible re-declarar y re-asignar valores.</p> 
+
+<p><span>LET</span>, es posible re-asignar pero no re-declarar.</p>
+
+<p><span>CONST</span> es una de las mejores maneras de manipular variables puesto que tiene reglas mas robustas que var y let</p>
+<p><span>CONST</span>, no puedes re-asignar ni re-declarar tipos de datos primitivos.</p> 
+<p><span>CONST</span>, puedes re-asignar arreglos y objetos pero no re-declararlos.</p> 
+<p><span>CONST</span>, tampoco puedes solo declararla, necesita una asignación.</p> 
+</div>
 </body>
 </html>
