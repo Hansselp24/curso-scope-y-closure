@@ -1,16 +1,16 @@
 //Cómo utilizar Closure para construir una alcancía
 //con Closure podemos agregarle diferentes monedas a nuestra alcanzia y que las vaya sumando a lo que teniamos previamente guardadado, tambien se puee crear otra instancia(variable) con otro nombre sin afectar a la que ya tenias.
 //----EJEMPLO 1 ----
-function moneyBox() {
+/*function moneyBox() {
     let saveCoins = 0;
     function countCoins(coins){
         saveCoins += coins;
         console.log(`My MoneyBox: $${saveCoins}`);
     }
     return countCoins;
-}
+}*/
 // Mi alcacia
-const myMoneyBox = moneyBox();
+/*const myMoneyBox = moneyBox();
 myMoneyBox(5);
 myMoneyBox(5);
 myMoneyBox(100);
@@ -19,10 +19,10 @@ myMoneyBox(100);
 const moneyBoxAna = moneyBox();
 moneyBoxAna(10);
 moneyBoxAna(5);
-moneyBoxAna(10);
+moneyBoxAna(10);*/
 
 //----EJEMPLO 2 ----
-function crearContador2(){
+/*function crearContador2(){
     let contador = 0;    
     
     return function incrementar(){
@@ -33,11 +33,13 @@ function crearContador2(){
 
 const contador1 = crearContador2();
 contador1();
-contador1();
+contador1();*/
 //funcions anidadas para devolver diferentes respuestas en su dependencia.
 
-    function crearContador(contador = 0){
-    return {
+  function crearContador(){
+      let contador = 0;
+    
+      return {
         incrementar: function(){
             contador = contador + 1;
             return contador;
@@ -49,10 +51,17 @@ contador1();
         obtenerValor: function(){
             return contador;
         }
-    };
+    }; 
 }
 
-crearContador();
+const contadorP = crearContador();
+contadorP.incrementar();
+contadorP.incrementar();
+contadorP.incrementar();
+contadorP.decrementar();
+console.log(contadorP.obtenerValor());
+
+
 
 //----EJEMPLO 3 ----
 //uso de Closures para fabricar funciones:
@@ -93,17 +102,17 @@ exit("usuario Registrado");*/
 
   //Clausuras y debugging
 
-const estilosPorDefecto = 'color: white';
+/*const estilosPorDefecto = 'color: white';
 function crearImpresoraDeMensajes(tipo, estilos) {
     return function mensaje(str) {
       console.log(`%c ${tipo}: ${str} `, estilos);
     }
   }
-  const error = crearImpresoraDeMensajes('Error', 'background: red; color: white;');
+  const error = crearImpresoraDeMensajes('Error', 'background: red; color: white;');*/
 
 
 //---Ejercicio en Playground ----
-  export function createPetList() {
+/*export function createPetList() {
     let arrayPetList = [];
   
     function addPetList(animals) {
@@ -120,13 +129,13 @@ function crearImpresoraDeMensajes(tipo, estilos) {
 const petList = createPetList();
 petList('perro');
 petList('gato');
-petList('pajarito');
+petList('pajarito');*/
 
 
-const nameOfCat = function() {
+/*const nameOfCat = function() {
     console.log(`El gatito se llama ${cat}`);
 }
 
 let cat = "IlloJuan";
 
-nameOfCat()
+nameOfCat()*/
